@@ -6,10 +6,15 @@ import pandas as pd
 # Configuración de la página
 st.set_page_config(page_title="Asistente Marista NLP", page_icon="🏫", layout="wide")
 
-# Caché para cargar los modelos más rápido
+# Botón para forzar recarga en caso de errores de caché
+if st.sidebar.button("🧹 Limpiar Caché y Recargar"):
+    st.cache_resource.clear()
+    st.rerun()
+
 @st.cache_resource
 def load_assets():
     try:
+        # Cargamos con un timestamp simple para depuración
         modelo = joblib.load('modelo_admision_marista.pkl')
         vectorizer = joblib.load('vectorizador_tfidf.pkl')
         nlp = spacy.load("es_core_news_sm")
