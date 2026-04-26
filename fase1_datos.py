@@ -46,11 +46,17 @@ df_masivo = pd.DataFrame(datos_sinteticos)
 df_masivo.to_csv("datos_admision_masivos.csv", index=False, encoding='utf-8')
 print("Archivo 'datos_admision_masivos.csv' generado con 5,000 registros.")
 
+import unicodedata
+
 # 2. Limpieza de datos
 def limpiar_texto(texto):
     if pd.isna(texto): return ""
     texto = re.sub(r'<.*?>', '', str(texto)) # Quitar HTML
     texto = texto.lower() # Minúsculas
+    
+    # Normalizar acentos
+    texto = unicodedata.normalize('NFKD', texto).encode('ascii', 'ignore').decode('ascii')
+    
     texto = re.sub(r'[^\w\s]', '', texto) # Quitar puntuación
     texto = " ".join(texto.split()) # Quitar espacios extra
     return texto

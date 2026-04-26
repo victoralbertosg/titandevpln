@@ -40,7 +40,11 @@ with col1:
     if st.button("🚀 Procesar con IA"):
         if mensaje_input:
             # A. Preprocesamiento
-            doc = nlp(str(mensaje_input).lower())
+            import unicodedata
+            texto_base = str(mensaje_input).lower()
+            texto_base = unicodedata.normalize('NFKD', texto_base).encode('ascii', 'ignore').decode('ascii')
+            
+            doc = nlp(texto_base)
             tokens = [t.lemma_ for t in doc if not t.is_stop and not t.is_punct and not t.is_digit]
             texto_final = " ".join(tokens)
             

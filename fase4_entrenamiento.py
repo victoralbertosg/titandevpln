@@ -28,9 +28,11 @@ X_test_tfidf = vectorizador.transform(X_test)
 
 print(f"Dimensiones de entrenamiento: {X_train_tfidf.shape}")
 
-# 4. Entrenamiento del Modelo (Random Forest)
-print("Entrenando RandomForest...")
-modelo = RandomForestClassifier(n_estimators=100, random_state=42, n_jobs=-1)
+from sklearn.linear_model import LogisticRegression
+
+# 4. Entrenamiento del Modelo (Logistic Regression)
+print("Entrenando LogisticRegression...")
+modelo = LogisticRegression(class_weight='balanced', random_state=42)
 modelo.fit(X_train_tfidf, y_train)
 
 # 5. Exportación de los modelos
