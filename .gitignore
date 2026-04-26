@@ -4,8 +4,8 @@ env/
 .env
 
 # Archivos de la base de datos y modelos entrenados (Suelen ser pesados y regenerables)
-*.csv
-*.pkl
+#*.csv
+#*.pkl
 
 # Archivos de Pycache y artefactos de compilación
 __pycache__/
