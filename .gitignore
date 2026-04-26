@@ -1,0 +1,37 @@
+# Entornos virtuales
+venv/
+env/
+.env
+
+# Archivos de la base de datos y modelos entrenados (Suelen ser pesados y regenerables)
+*.csv
+*.pkl
+
+# Archivos de Pycache y artefactos de compilación
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Archivos de prueba e imágenes generadas
+matriz_confusion.png
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
