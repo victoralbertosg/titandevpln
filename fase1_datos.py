@@ -6,8 +6,8 @@ print("Iniciando Fase 1: Generación y Limpieza de Datos...")
 
 # 1. Generación de datos sintéticos
 terminos_costo = ["precios", "costos", "pensiones", "cuotas", "mensualidad", "pagos"]
-terminos_vacante = ["vacantes", "cupos", "espacios", "lugares", "matrículas disponibles"]
-terminos_doc = ["requisitos", "documentos", "papeles", "documentación", "partidas"]
+terminos_vacante = ["vacantes", "cupos", "espacios", "lugares", "disponibilidad de ingreso"]
+terminos_doc = ["requisitos", "documentos", "papeles", "documentación", "partidas", "ficha de matrícula"]
 terminos_cita = ["cronograma", "charlas", "entrevistas", "citas", "reunión"]
 
 patrones = [

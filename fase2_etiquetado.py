@@ -16,7 +16,7 @@ def asignar_etiqueta_inicial(texto):
         return 'ADMIS_VACANTES'
         
     # ADMIS_REQUIS_DOC: keywords related to documentation/requirements
-    if any(p in texto_str for p in ['documento', 'papel', 'requisito', 'partida', 'dni', 'traslado', 'postulante', 'documentacion', 'certificado']):
+    if any(p in texto_str for p in ['documento', 'papel', 'requisito', 'partida', 'dni', 'traslado', 'postulante', 'documentacion', 'certificado', 'matricula']):
         return 'ADMIS_REQUIS_DOC'
         
     # ADMIS_CITAS: keywords related to meetings/visits
