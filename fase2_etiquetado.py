@@ -5,9 +5,9 @@ df = pd.read_csv("dataset_admision_limpio.csv")
 
 def asignar_etiqueta_inicial(texto):
     reglas = {
-        'ADMIS_COSTOS': ['pension', 'cuota', 'precio', 'pagar', 'costo', 'descuento', 'mensualidad'],
-        'ADMIS_VACANTES': ['vacante', 'cupo', 'disponibilidad', 'espacio', 'lugar', 'ingreso'],
-        'ADMIS_REQUIS_DOC': ['documento', 'papel', 'requisito', 'partida', 'dni', 'traslado', 'postulante'],
+        'ADMIS_COSTOS': ['pension', 'cuota', 'precio', 'pagar', 'costo', 'descuento', 'mensualidad', 'pago'],
+        'ADMIS_VACANTES': ['vacante', 'cupo', 'disponibilidad', 'espacio', 'lugar', 'ingreso', 'matricula', 'disponible'],
+        'ADMIS_REQUIS_DOC': ['documento', 'papel', 'requisito', 'partida', 'dni', 'traslado', 'postulante', 'documentacion'],
         'ADMIS_CITAS': ['entrevista', 'visita', 'reunion', 'cita', 'charla', 'cronograma']
     }
     
