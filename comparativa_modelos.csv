@@ -1,0 +1,5 @@
+Modelo,Accuracy,Precisión,Recall,F1-Score,T. Entrenamiento (s),T. Predicción (s)
+Logistic Regression (Actual),1.0,1.0,1.0,1.0,0.0482,0.0005
+Naive Bayes (Multinomial),1.0,1.0,1.0,1.0,0.0081,0.0003
+Random Forest,1.0,1.0,1.0,1.0,0.3457,0.0152
+Support Vector Machine (LinearSVC),1.0,1.0,1.0,1.0,0.039,0.0004
